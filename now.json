@@ -1,0 +1,13 @@
+{
+	"name": "VaibhavKothi"
+
+ 	"builds": [
+    		{ "src": "*.html", "use": "@now/static" }
+  	]
+
+	"routes": [
+		{ "src": "/custom-page", "headers": {"cache-control": "s-maxage=1000"}, "dest": "/index.html" },
+		{ "src": "/aboutMe", "dest": "/aboutMe.html" },
+		{ "src": "/build/stats", "status": 404, "dest": "/404" }
+  ]
+}
