@@ -1,0 +1,182 @@
+body
+{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+.fullBg{
+  height: 90vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background : -moz-radial-gradient(89.91% 115.49%, circle farthest-side, rgba(228, 253, 255, 1) 0%, rgba(112, 205, 227, 1) 100%);
+  background : -webkit-radial-gradient(89.91% 115.49%, circle farthest-side, rgba(228, 253, 255, 1) 0%, rgba(112, 205, 227, 1) 100%);
+  background : -webkit-gradient(radial,89.91% 115.49% ,0 , 89.91% 115.49%, 664.19 ,color-stop(0,rgba(228, 253, 255, 1) ),color-stop(1,rgba(112, 205, 227, 1) ));
+  background : -o-radial-gradient(89.91% 115.49%, circle farthest-side, rgba(228, 253, 255, 1) 0%, rgba(112, 205, 227, 1) 100%);
+  background : -ms-radial-gradient(89.91% 115.49%, circle farthest-side, rgba(228, 253, 255, 1) 0%, rgba(112, 205, 227, 1) 100%);
+  background : radial-gradient(89.91% 115.49%, circle farthest-side, rgba(228, 253, 255, 1) 0%, rgba(112, 205, 227, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Stlye=2);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Stlye=2);"
+}
+.fullBg1{
+  width: 100vw;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+}
+.container1{
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 20%;
+  background : linear-gradient(0deg, rgba(249, 249, 249, 1) 0%, rgba(249, 249, 249, 0) 100%);
+  border-radius : 0 0 2vw 2vw;
+  overflow: hidden;
+  animation-name: dropDown1;
+  animation-duration: 2s;
+  animation-delay: 0s;
+  animation-timing-function: ease;
+}
+.bit1{
+  width: 20%;
+  height: 100%;
+  position: relative;
+  float: left ;
+  top: 50%;
+  left: -1.5%;
+  transform: translate(0%, -50%);
+}
+.hello{
+  float: left;
+  position: relative;
+  top: 50%;
+  left: 0%;
+  transform: translate(0%, -50%);
+  margin-left: 0;
+  padding-left: 1%;
+}
+.hellotext{
+    position: relative;
+    float: left ;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+h1{
+  font-family: Product Sans Regular;
+  color: #191919;
+  font-size: 300%;
+  padding: 0;
+  margin: 0;
+}
+p{
+  color: #5f6368;
+  font-family: Bahnschrift Regular;
+  font-size: 130%;
+  margin: 0;
+  margin-right: 20%;
+  padding-top: .5%;
+}
+@media only screen and (max-width: 840px) {
+  h1{
+    font-size: 200%;
+  }
+  p{
+    margin-right: 5%;
+    font-size: 80%;
+  }
+  .bit1{
+    width: 40vh;
+  }
+}
+.container2{
+  position: absolute;
+  top: 25%;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 12%;
+  background : linear-gradient(0deg, rgba(249, 249, 249, 1) 0%, rgba(249, 249, 249, 0.08) 92.04%, rgba(249, 249, 249, 0) 100%);
+  border-radius : 0 0 2vw 2vw;
+  animation-name: dropDown;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+}
+.bit2{
+  width: 20%;
+  height: 100%;
+  position: relative;
+  float: right;
+  top: 40%;
+  right: -2%;
+  transform: translate(0%, -60%);
+}
+.intro{
+  float: right;
+  position: relative;
+  top: 40%;
+  right: 0%;
+  transform: translate(0%, -60%);
+  margin-right: 0;
+  padding-right: 1%;
+}
+.introtext{
+    position: relative;
+    float: right;
+    top: 50%;
+    right: 0%;
+    transform: translate(0%, -50%);
+}
+h1{
+  font-family: Product Sans Regular;
+  color: #191919;
+  font-size: 300%;
+  padding: 0;
+  margin: 0;
+}
+#intro{
+  color: #5f6368;
+  font-family: Bahnschrift Regular;
+  font-size: 130%;
+  margin: 0;
+  margin-left: 10%;
+  padding-top: .5%;
+}
+@media only screen and (max-width: 840px) {
+  h1{
+    font-size: 200%;
+  }
+  #intro{
+    margin-left: 5%;
+    font-size: 80%;
+  }
+  .bit2{
+    width: 40vh;
+  }
+}
+@keyframes dropDown{
+  0%{
+    transform: translateY(-200%);
+  }
+  100%{
+    transform: translateY(0%);
+  }
+}
+@keyframes dropDown1{
+  0%{
+    transform: translateY(-300%);
+  }
+  100%{
+    transform: translateY(0%);
+  }
+}

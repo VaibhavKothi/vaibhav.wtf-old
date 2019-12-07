@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Bungee+Hairline&display=swap');
+@font-face {
+font-family: 'Bahnschrift Regular';
+font-style: normal;
+font-weight: normal;
+src: local('Bahnschrift Regular'), url('Bahnschrift Regular.woff') format('woff');
+}
+@font-face {
+font-family: 'Product Sans Regular';
+font-style: normal;
+font-weight: normal;
+src: local('Product Sans Regular'), url('Product Sans Regular.ttf') format('truetype');
+}

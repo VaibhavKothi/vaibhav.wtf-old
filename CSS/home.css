@@ -1,0 +1,350 @@
+body
+{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+#load{
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #EDEDED;
+}
+#loader{
+  height: 25%;
+  width: 100%;
+  background: url("../Assets/loading.gif");
+  background-color: #EDEDED;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+#cont{
+  display: none;
+  margin: 0;
+  padding: 0;
+}
+.fullBg{
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.fullBg1{
+  width: 211vh;
+  margin: 0;
+  padding: 0;
+}
+.type{
+  position: absolute;
+  top: 7%;
+  left: 55%;
+  transform: translate(-50%, -4%);
+  margin: 0;
+	display: flex;
+  height: 18%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  cursor: context-menu;
+}
+.head{
+  font-family: Product Sans Regular;
+  font-size: 12vh;
+  color: #f9f9f9;
+  text-align: left;
+  margin: 0;
+}
+@media only screen and (max-width: 840px) {
+  .head{
+    font-size: 9vh;
+  }
+  .blink{
+    font-size: 10vh;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .blink{
+      font-size: 9vh;
+  }
+}
+.blink {
+  font-family: Product Sans Regular;
+  animation: blink 0.5s infinite;
+  opacity: .45;
+  overflow: hidden;
+}
+p{
+  font-family: Product Sans Regular;
+  font-size: 5vh;
+  margin: 0;
+  text-decoration: none;
+}
+.text{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #f9f9f9;
+  background: transparent;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+#aboutMe{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  height: 100vh;
+  width: 6vw;
+  padding: 2vw;
+  overflow: hidden;
+  cursor: pointer;
+}
+#aboutMe .links{
+  transform: rotate(90deg);
+  position: absolute;
+  top: 50%;
+  right: -1vw;
+  visibility: hidden;
+}
+#aboutMe:hover{
+  animation-name: rightIn;
+  animation-duration: .2s;
+  animation-timing-function: ease-in-out;
+  background: linear-gradient(to right, rgba(25, 25, 25, 0) 30%, rgba(25, 25, 25, .4) 65%, rgba(25, 25, 25, 1) 100%);
+}
+@keyframes rightIn{
+  0%{
+    background: linear-gradient(to right, rgba(128, 68, 56, 0) 30%, rgba(25, 25, 25, 0) 65%, rgba(25, 25, 25, 0) 100%);
+  }
+  50%{
+    background: linear-gradient(to right, rgba(25, 25, 25, 0) 30%, rgba(25, 25, 25, 0) 65%, rgba(25, 25, 25, .4) 100%);
+  }
+  100%{
+    background: linear-gradient(to right, rgba(25, 25, 25, 0) 30%, rgba(25, 25, 25, .4) 65%, rgba(25, 25, 25, 1) 100%);
+  }
+}
+#aboutMe:hover .links{
+  animation: rightTextIn;
+  animation-duration: .2s;
+  transition-timing-function: ease-in-out;
+  visibility: visible;
+}
+@keyframes rightTextIn{
+  0%{
+    opacity: 0;
+    right: -4%;
+  }
+  50%{
+    opacity: .5;
+    right: -3%;
+  }
+  100%{
+    opacity: 1;
+    right: -2%;
+  }
+}
+@keyframes rightTextInS{
+  0%{
+    opacity: 0;
+    right: -7%;
+  }
+  50%{
+    opacity: .5;
+    right: -6%;
+  }
+  100%{
+    opacity: 1;
+    right: -3%;
+  }
+}
+@keyframes rightTextInXS{
+  0%{
+    opacity: 0;
+    right: -12%;
+  }
+  50%{
+    opacity: .5;
+    right: -11%;
+  }
+  100%{
+    opacity: 1;
+    right: -10%;
+  }
+}
+@media only screen and (max-width: 840px) {
+  #aboutMe:hover .links{
+    animation: rightTextInS;
+    animation-duration: .2s;
+    transition-timing-function: ease-in-out;
+  }
+  #aboutMe .links{
+    right: -5vw;
+  }
+}
+@media only screen and (max-width: 500px) {
+  #aboutMe:hover .links{
+    animation: rightTextInXS;
+    animation-duration: .2s;
+    transition-timing-function: ease-in-out;
+  }
+  #aboutMe .links{
+    right: -10vw;
+  }
+}
+#skills{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  height: 100vh;
+  width: 6vw;
+  padding: 2vw;
+  overflow: hidden;
+  cursor: pointer;
+}
+#skills .links{
+  transform: rotate(90deg);
+  position: absolute;
+  top: 50%;
+  left: 2vw;
+  visibility: hidden;
+}
+#skills:hover{
+  animation-name: leftIn;
+  animation-duration: .2s;
+  animation-timing-function: ease-in-out;
+  background: linear-gradient(to left, rgba(25, 25, 25, 0) 30%, rgba(25, 25, 25, .4) 65%, rgba(25, 25, 25, 1) 100%);
+}
+@keyframes leftIn{
+  0%{
+    background: linear-gradient(to left, rgba(128, 68, 56, 0) 30%, rgba(25, 25, 25, 0) 65%, rgba(25, 25, 25, 0) 100%);
+  }
+  50%{
+    background: linear-gradient(to left, rgba(25, 25, 25, 0) 30%, rgba(25, 25, 25, 0) 65%, rgba(25, 25, 25, .4) 100%);
+  }
+  100%{
+    background: linear-gradient(to left, rgba(25, 25, 25, 0) 30%, rgba(25, 25, 25, .4) 65%, rgba(25, 25, 25, 1) 100%);
+  }
+}
+#skills:hover .links{
+  animation: leftTextIn;
+  animation-duration: .2s;
+  transition-timing-function: ease-in-out;
+  visibility: visible;
+}
+@keyframes leftTextIn{
+  0%{
+    opacity: 0;
+    left: 0%;
+  }
+  50%{
+    opacity: .5;
+    left: 1%;
+  }
+  100%{
+    opacity: 1;
+    left: 2%;
+  }
+}
+#projects{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  height: 10vh;
+  width: 100vw;
+  padding: 2vh;
+  position: absolute;
+  bottom: 0vh;
+  overflow: hidden;
+  cursor: pointer;
+}
+#projects .links{
+  position: absolute;
+  bottom: 5vh;
+  visibility: hidden;
+}
+#projects:hover{
+  animation-name: downUp;
+  animation-duration: .2s;
+  animation-timing-function: ease-in-out;
+  background: linear-gradient(to bottom, rgba(25, 25, 25, 0) 30%, rgba(25, 25, 25, .4) 65%, rgba(25, 25, 25, 1) 100%);
+}
+@keyframes downUp{
+  0%{
+    background: linear-gradient(to bottom, rgba(128, 68, 56, 0) 30%, rgba(25, 25, 25, 0) 65%, rgba(25, 25, 25, 0) 100%);
+  }
+  50%{
+    background: linear-gradient(to bottom, rgba(25, 25, 25, 0) 30%, rgba(25, 25, 25, 0) 65%, rgba(25, 25, 25, .4) 100%);
+  }
+  100%{
+    background: linear-gradient(to bottom, rgba(25, 25, 25, 0) 30%, rgba(25, 25, 25, .4) 65%, rgba(25, 25, 25, 1) 100%);
+  }
+}
+#projects:hover .links{
+  animation: upTextIn;
+  animation-duration: .2s;
+  transition-timing-function: ease-in-out;
+  visibility: visible;
+}
+@keyframes upTextIn{
+  0%{
+    opacity: 0;
+    bottom: 3vh;
+  }
+  50%{
+    opacity: .5;
+    bottom: 4vh;
+  }
+  100%{
+    opacity: 1;
+    bottom: 5vh;
+  }
+}
+.arrow{
+  border-width: .7vh;
+  border-style: solid;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  position: relative;
+  height: 1.7vw;
+  width: 1.7vw;
+  top: 50%;
+  color: #191919;
+  visibility: visible;
+}
+.right{
+  transform: rotate(45deg);
+}
+#aboutMe:hover .right{
+  color: #f9f9f9
+}
+.down{
+  border-top-color: transparent;
+  border-bottom-color: #191919;
+  border-left-color: transparent;
+  transform: rotate(45deg);
+}
+#projects:hover .down{
+  color: #f9f9f9;
+  border-bottom-color: #f9f9f9;
+}
+.left{
+  transform: rotate(225deg);
+}
+#skills:hover .left{
+  color: #f9f9f9
+}
