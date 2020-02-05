@@ -151,6 +151,7 @@ h1{
   margin: 0;
   margin-left: 10%;
   padding-top: .5%;
+  text-align: right;
 }
 @media only screen and (max-width: 840px) {
   h1{
