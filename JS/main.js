@@ -13,7 +13,7 @@ function aboutMe(){
 	TweenMax.to(document.getElementById("running"), 5, {x:'70vw'});
 	var audio = new Audio('./Assets/beep.mp3');
 	audio.play();
-	setTimeout("location.href='./aboutMe';",5000);
+	setTimeout("location.href='./aboutMe';",4000);
 }
 function skills(){
 	document.getElementById("sitting").style.visibility = "hidden";
@@ -21,11 +21,17 @@ function skills(){
 	TweenMax.to(document.getElementById("runningL"), 5, {x:'-80vw'});
 	var audio = new Audio('./Assets/beep.mp3');
 	audio.play();
-	setTimeout("location.href='./skills';",5000);
+	setTimeout("location.href='./skills';",4000);
 }
 function projects(){
 	document.getElementById("sitting").style.visibility = "hidden";
-	setTimeout("location.href='https://www.behance.net/vaibhav_kothi';",000);
+	document.getElementById("running").style.visibility = "visible";
+	TweenMax.to(document.getElementById("running"), 2, {x:'15vw'});
+	//var audio = new Audio('./Assets/beep.mp3');
+	//audio.play();
+	setTimeout("location.href='./projects';",2000);
+	//document.getElementById("sitting").style.visibility = "hidden";
+	//setTimeout("location.href='https://www.behance.net/vaibhav_kothi';",000);
 }
 
 setInterval(function(){
