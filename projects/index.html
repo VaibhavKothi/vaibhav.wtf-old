@@ -860,41 +860,55 @@
     TweenMax.fromTo(document.getElementById("Falling"), 1.5, {y:'-15vh'}, {y:'72vh'});
     setTimeout("document.getElementById('Falling').style.visibility = 'hidden';",2000);
     setTimeout("document.getElementById('standing').style.visibility = 'visible';",2000);
+    var k;
     var i = 0;
+    var img = [ "../Assets/__1.jpg",
+    "../Assets/__2.jpg",
+    "../Assets/__3.jpg",
+    "../Assets/__4.jpg",
+    "../Assets/__5.jpg",
+    "../Assets/__6.jpg",
+    "../Assets/__7.jpg",
+    "../Assets/__8.jpg",
+    "../Assets/__9.jpg",
+    "../Assets/__10.jpg",
+    "../Assets/__11.jpg",
+  ];
+    var link = ["window.open('https://www.behance.net/gallery/91144577/Poster')",
+                  "window.open('https://www.behance.net/gallery/90702661/AICSSYC19')",
+                  "window.open('https://www.behance.net/gallery/87474789/CVM-Logo')",
+                  "window.open('https://www.behance.net/gallery/87455909/INSPIRO-20')",
+                  "window.open('https://www.behance.net/gallery/87374333/Freeflow')",
+                  "window.open('https://www.behance.net/gallery/87360003/INSPIRO-20-Logofolio')",
+                  "window.open('https://www.behance.net/gallery/87327575/WaitArea')",
+                  "window.open('https://www.behance.net/gallery/87318989/IEEE-Roll-Up-Banner')",
+                  "window.open('https://www.behance.net/gallery/78754971/Sunrise')",
+                  "window.open('https://www.behance.net/gallery/76747299/ADIT-Logo')",
+                  "window.open('https://www.behance.net/gallery/76724941/SPECTRUM19')",
+                 ];
     setInterval(function(){
-      if (i>9) {
-        i = -1;
-      }
-    	function change() {
-        var img = [ "../Assets/__1.jpg",
-                    "../Assets/__2.jpg",
-                    "../Assets/__3.jpg",
-                    "../Assets/__4.jpg",
-                    "../Assets/__5.jpg",
-                    "../Assets/__6.jpg",
-                    "../Assets/__7.jpg",
-                    "../Assets/__8.jpg",
-                    "../Assets/__9.jpg",
-                    "../Assets/__10.jpg",
-                    "../Assets/__11.jpg",
-                  ];
-        var link = ["window.open('https://www.behance.net/gallery/91144577/Poster')",
-                    "window.open('https://www.behance.net/gallery/90702661/AICSSYC19')",
-                    "window.open('https://www.behance.net/gallery/87474789/CVM-Logo')",
-                    "window.open('https://www.behance.net/gallery/87455909/INSPIRO-20')",
-                    "window.open('https://www.behance.net/gallery/87374333/Freeflow')",
-                    "window.open('https://www.behance.net/gallery/87360003/INSPIRO-20-Logofolio')",
-                    "window.open('https://www.behance.net/gallery/87327575/WaitArea')",
-                    "window.open('https://www.behance.net/gallery/87318989/IEEE-Roll-Up-Banner')",
-                    "window.open('https://www.behance.net/gallery/78754971/Sunrise')",
-                    "window.open('https://www.behance.net/gallery/76747299/ADIT-Logo')",
-                    "window.open('https://www.behance.net/gallery/76724941/SPECTRUM19')",
-                   ];
-        document.getElementById('xyz').setAttribute('xlink:href', img[++i]);
-        console.log(i);
-        document.getElementById('Screen').setAttribute('onclick', link[i]);
-      };
-    	change();
-    }, 3000);
+      k = 0;
+      window.addEventListener("wheel", event => {
+          var delta = 0;
+            delta = Math.sign(event.deltaY);
+            // console.info(delta);
+            setTimeout(change(delta) , 3000);
+        });
+      function change( k ) {
+        if (i>10) { i = -1;  }
+        if (i+k < 0) { i = 11  }
+          if(k>=0) {
+            document.getElementById('xyz').setAttribute('xlink:href', img[++i]);
+            console.log(i);
+            document.getElementById('Screen').setAttribute('onclick', link[i]);
+          }
+          else{
+            document.getElementById('xyz').setAttribute('xlink:href', img[--i]);
+            console.log(i);
+            document.getElementById('Screen').setAttribute('onclick', link[i]);
+          }
+        };
+    	change( k );
+    }, 10000);
   </script>
 </body>
