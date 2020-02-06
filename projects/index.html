@@ -60,8 +60,8 @@
         	.st15{fill:#666666;}
         	.st16{fill:#1D1D1D;}
         	.s{fill:url(#img1);}
-          .l{fill:#E2D9D3;}
-          .r{fill:#E2D9D3;}
+          .l{fill:url(#img0);}
+          .r{fill:url(#img2);}
         	.st18{fill:#020000;}
         	.st19{fill:#D48C5A;}
         	.st20{fill:#FBFBFB;}
@@ -107,6 +107,16 @@
         <defs>
           <pattern id="img1" patternUnits="userSpaceOnUse" x="-165" y="150" width="750px" height="596.8px">
             <image id="xyz" xlink:href="../Assets/__1.jpg" width="750px" height="596.8px" />
+          </pattern>
+        </defs>
+        <defs>
+          <pattern id="img0" patternUnits="userSpaceOnUse" x="225" y="75" width="750px" height="596.8px" style="transform: scale(1.2);">
+            <image id="abc" xlink:href="../Assets/__11.jpg" width="750px" height="596.8px"/>
+          </pattern>
+        </defs>
+        <defs>
+          <pattern id="img2" patternUnits="userSpaceOnUse" x="-125" y="75" width="750px" height="596.8px" style="transform: scale(1.2);">
+            <image id="def" xlink:href="../Assets/__2.jpg" width="750px" height="596.8px" />
           </pattern>
         </defs>
         <rect id="Floor" y="800" class="st0" width="1920" height="128"/>
@@ -386,8 +396,8 @@
         	<polygon id="stagePlatform" class="st16" points="1920,946 0,946 57,909 1863,909 	"/>
         </g>
         <path id="Screen" onclick="window.open('https://www.behance.net/gallery/91144577/Poster')" class="s" d="M1335,205v476.8c0,33.1-26.9,60-60,60H645c-33.1,0-60-26.9-60-60V205c0-33.1,26.9-60,60-60h630C1308.1,145,1335,171.9,1335,205z"/>
-        <path id="leftScreen" class="l" d="M83,90h133c28.4,0,51.5,23.1,51.5,51.5v611c0,28.4-23.1,51.5-51.5,51.5H83c-28.4,0-51.5-23.1-51.5-51.5v-611C31.5,113.1,54.6,90,83,90z"/>
-        <path id="rightScreen" class="r" d="M1704,90h133c28.4,0,51.5,23.1,51.5,51.5v611c0,28.4-23.1,51.5-51.5,51.5h-133c-28.4,0-51.5-23.1-51.5-51.5v-611C1652.5,113.1,1675.5,90,1704,90z"/>
+        <path id="leftScreen" onclick="window.open('https://www.behance.net/gallery/76724941/SPECTRUM19')" class="l" d="M83,90h133c28.4,0,51.5,23.1,51.5,51.5v611c0,28.4-23.1,51.5-51.5,51.5H83c-28.4,0-51.5-23.1-51.5-51.5v-611C31.5,113.1,54.6,90,83,90z"/>
+        <path id="rightScreen" onclick="window.open('https://www.behance.net/gallery/90702661/AICSSYC19')" class="r" d="M1704,90h133c28.4,0,51.5,23.1,51.5,51.5v611c0,28.4-23.1,51.5-51.5,51.5h-133c-28.4,0-51.5-23.1-51.5-51.5v-611C1652.5,113.1,1675.5,90,1704,90z"/>
         <g id="Falling">
           <path id="Shoe" class="st39" d="M1457,256l3-8c0.3-1.3,0.7-2.7,1-4l6-5l8-1l8-4h5l3,2c-0.3,1.7-0.7,3.3-1,5l-6,12l-9,7l-8,2
           L1457,256z M1292,248c0.6,3.8,2.3,7.3,5,10l6,7c2.7,1.8,5.8,2.8,9,3c2.4,0.1,4.8-0.2,7-1l7-6l-3-5l-2-5l-3-3l-3-2
@@ -860,7 +870,8 @@
     TweenMax.fromTo(document.getElementById("Falling"), 1.5, {y:'-15vh'}, {y:'72vh'});
     setTimeout("document.getElementById('Falling').style.visibility = 'hidden';",2000);
     setTimeout("document.getElementById('standing').style.visibility = 'visible';",2000);
-    var k;
+    var k,l;
+    const total=11;
     var i = 0;
     var img = [ "../Assets/__1.jpg",
     "../Assets/__2.jpg",
@@ -886,29 +897,39 @@
                   "window.open('https://www.behance.net/gallery/76747299/ADIT-Logo')",
                   "window.open('https://www.behance.net/gallery/76724941/SPECTRUM19')",
                  ];
-    setInterval(function(){
-      k = 0;
-      window.addEventListener("wheel", event => {
-          var delta = 0;
-            delta = Math.sign(event.deltaY);
-            // console.info(delta);
-            setTimeout(change(delta) , 3000);
-        });
-      function change( k ) {
-        if (i>10) { i = -1;  }
-        if (i+k < 0) { i = 11  }
-          if(k>=0) {
-            document.getElementById('xyz').setAttribute('xlink:href', img[++i]);
-            console.log(i);
-            document.getElementById('Screen').setAttribute('onclick', link[i]);
-          }
-          else{
-            document.getElementById('xyz').setAttribute('xlink:href', img[--i]);
-            console.log(i);
-            document.getElementById('Screen').setAttribute('onclick', link[i]);
-          }
-        };
-    	change( k );
-    }, 10000);
+     function change( k ) {
+       if (i+k > total - 1) { i = -1;  }
+       if (i+k < 0) { i = total;  }
+       if(k>=0) {   ++i;     }
+       else if(k < 0) { --i; }
+       console.log(i);
+       document.getElementById('xyz').setAttribute('xlink:href', img[i]);
+       document.getElementById('Screen').setAttribute('onclick', link[i]);
+       sides(i);
+     };
+     function sides( l ) {
+       var z,a,b;
+       if (l+1 > total - 1) { z = -1;
+         a = z+1;
+         b = l-1;
+       }
+       else if (l-1 < 0) { z = total;
+         a = l+1;
+         b = z-1;
+       }
+       else{
+         a = l+1;
+         b = l-1;
+       }
+       document.getElementById('def').setAttribute('xlink:href', img[a]);
+       document.getElementById('rightScreen').setAttribute('onclick', link[a]);
+       document.getElementById('abc').setAttribute('xlink:href', img[b]);
+       document.getElementById('leftScreen').setAttribute('onclick', link[b]);
+     };
+     window.addEventListener("wheel", event => {
+       var delta = 0;
+       delta = Math.sign(event.deltaY);
+       setTimeout(change((delta) ) , 3000);
+    });
   </script>
 </body>
