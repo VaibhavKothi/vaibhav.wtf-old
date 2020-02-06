@@ -903,6 +903,8 @@
        if(k>=0) {   ++i;     }
        else if(k < 0) { --i; }
        console.log(i);
+       TweenMax.set(document.getElementById('xyz'),{autoAlpha:0});
+       TweenMax.to(document.getElementById('xyz'), 1.5, { ease: Power1.easeOut, autoAlpha:1});
        document.getElementById('xyz').setAttribute('xlink:href', img[i]);
        document.getElementById('Screen').setAttribute('onclick', link[i]);
        sides(i);
@@ -921,6 +923,10 @@
          a = l+1;
          b = l-1;
        }
+       setTimeout(TweenMax.set(document.getElementById('rightScreen'),{autoAlpha:0}), 1000);
+       setTimeout(TweenMax.to(document.getElementById('rightScreen'), 1.5, { ease: Power1.easeOut, autoAlpha:1}), 1000);
+       setTimeout(TweenMax.set(document.getElementById('leftScreen'),{autoAlpha:0}), 1000);
+       setTimeout(TweenMax.to(document.getElementById('leftScreen'), 1.5, { ease: Power1.easeOut, autoAlpha:1}), 1000);
        document.getElementById('def').setAttribute('xlink:href', img[a]);
        document.getElementById('rightScreen').setAttribute('onclick', link[a]);
        document.getElementById('abc').setAttribute('xlink:href', img[b]);
@@ -931,5 +937,6 @@
        delta = Math.sign(event.deltaY);
        setTimeout(change((delta) ) , 3000);
     });
+    // setInterval(function(){ change( 1 ); }, 5000);
   </script>
 </body>
