@@ -857,7 +857,7 @@
         	c-6.3-9.5-14.8-12.5-26.8-9.7c-13.4,3.1-18.8,14.7-12.7,27c1.2,2.5,2.8,4.7,4,7.2c2.8,5.4,2.6,11,1.7,17.3
         	c-9.7-6.9-20.6-8.7-31.1-12c1.4-3.2,6.9-3.1,6-6.6c-1.9-7.6,8-14.2,1.5-21.9c-0.4-0.5,0.7-2.3,1.2-3.5c4-11.2,1-18.9-9.6-24.5
         	c-5.1-2.8-10.7-3.3-16.4-3.2H0v208.9L826,1079.2z"/>
-        <g id="prev" onclick=change(-1) class="st59">
+        <g id="prev" onclick="return change(-1)" class="st59">
           <g>
             <g>
               <g class="st60">
@@ -926,7 +926,7 @@
             </g>
           </g>
         </g>
-        <g id="next" onclick=change(1) class="st59">
+        <g id="next" onclick="return change(1)" class="st59">
           <g>
             <g>
               <g class="st60">
@@ -1084,16 +1084,21 @@
        setTimeout( change(delta) , 4000);
     });
     // setInterval(function(){ change( 1 ); }, 10000);
-    window.addEventListener("mousedown",event => {
-      var init = 0;
+    var init = 0;
+    var end = 0;
+
+    window.addEventListener("mousedown",event => { // aa su event ni andar event
+
       init = event.clientX;
+
+});
       window.addEventListener("mouseup",event => {
-        var end = 0;
+
         end = event.clientX;
         var diff = end - init;
+
         if(diff > 0) { setTimeout(change((-1) ) , 4000); }
         else if(diff < 0) { setTimeout(change((1) ) , 4000); }
       });
-    });
   </script>
 </body>
