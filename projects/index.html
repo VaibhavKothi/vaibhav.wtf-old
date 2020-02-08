@@ -935,8 +935,19 @@
      window.addEventListener("wheel", event => {
        var delta = 0;
        delta = Math.sign(event.deltaY);
-       setTimeout(change((delta) ) , 3000);
+       setTimeout(change((delta) ) , 4000);
     });
-    // setInterval(function(){ change( 1 ); }, 5000);
+    setInterval(function(){ change( 1 ); }, 10000);
+    window.addEventListener("mousedown",event => {
+      var init = 0;
+      init = event.clientX;
+      window.addEventListener("mouseup",event => {
+        var end = 0;
+        end = event.clientX;
+        var diff = end - init;
+        if(diff > 0) { setTimeout(change((-1) ) , 4000); }
+        else if(diff < 0) { setTimeout(change((1) ) , 4000); }
+      });
+    });
   </script>
 </body>
