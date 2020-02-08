@@ -1,0 +1,27 @@
+{
+  "short_name": "Vaibhav",
+  "name": "Vaibhav Kothi",
+  "related_applications": [
+    {
+      "platform": "play",
+      "id": "vaibhav.wtf"
+    }
+  ],
+  "icons": [
+    {
+      "src": "/Icon/Logo_192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/Icon/Logo_512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#efefef",
+  "display": "standalone",
+  "orientation": "landscape",
+  "theme_color": "#444444"
+}

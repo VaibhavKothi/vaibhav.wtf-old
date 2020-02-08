@@ -11,6 +11,7 @@
   <link rel="shortcut icon" type="image/x-icon" href="Icon/logo.ico" />
   <link rel="stylesheet" type="text/css" href="CSS/home.css">
   <link rel="stylesheet" type="text/css" href="Fonts/style.css">
+  <link rel="manifest" href="manifest.json">
 </head>
 <body onload = loader()>
   <div id="load">
@@ -213,7 +214,7 @@
           </style>
           <defs>
               <filter id="turb">
-                  <feTurbulence id="turbwave" type="fractalNoise" baseFrequency="0.01" numOctaves="0.25" result="turbulence_3" data-filterId="3" />
+                  <feTurbulence id="turbwave" type="fractalNoise" baseFrequency="0.01" numOctaves=".25" result="turbulence_3" data-filterId="3" />
                   <feDisplacementMap xChannelSelector="R" yChannelSelector="G" in="SourceGraphic" in2="turbulence_3" scale="40" />
               </filter></defs>
           <radialGradient id="sky_1_" cx="1158.5016" cy="191.2831" r="598.7402" gradientTransform="matrix(0.998 0 0 -1.0075 13.4369 807.8755)" gradientUnits="userSpaceOnUse">
