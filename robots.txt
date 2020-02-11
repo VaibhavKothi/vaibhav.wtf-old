@@ -1,4 +1,5 @@
 Sitemap: http://www.vaibhav.wtf/sitemap.xml
 User-agent: *
 Allow: /aboutMe/
+Allow: /projects/
 Allow: /skills/
