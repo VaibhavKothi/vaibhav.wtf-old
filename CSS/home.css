@@ -28,6 +28,7 @@ body
   flex-direction: column;
   justify-content: center;
   background-color: #EDEDED;
+    font-family: Product Sans Regular;
   overflow: hidden;
 }
 #loader{
