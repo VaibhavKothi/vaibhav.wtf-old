@@ -14,6 +14,16 @@
   <link rel="stylesheet" type="text/css" href="../CSS/footer.css">
 </head>
 <body>
+  <div id="kmg1"></div>
+  <div id="kmg2"></div>
+  <div id="kmg3"></div>
+  <div id="kmg4"></div>
+  <div id="kmg5"></div>
+  <div id="kmg6"></div>
+  <div id="kmg7"></div>
+  <div id="kmg8"></div>
+  <div id="kmg9"></div>
+  <div id="kmg10"></div>
   <div class="fullBg">
     <div class="fullBg1">
       <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1920 1080" style="enable-background:new 0 0 1920 1080;" xml:space="preserve">
@@ -860,7 +870,7 @@
         	c-6.3-9.5-14.8-12.5-26.8-9.7c-13.4,3.1-18.8,14.7-12.7,27c1.2,2.5,2.8,4.7,4,7.2c2.8,5.4,2.6,11,1.7,17.3
         	c-9.7-6.9-20.6-8.7-31.1-12c1.4-3.2,6.9-3.1,6-6.6c-1.9-7.6,8-14.2,1.5-21.9c-0.4-0.5,0.7-2.3,1.2-3.5c4-11.2,1-18.9-9.6-24.5
         	c-5.1-2.8-10.7-3.3-16.4-3.2H0v208.9L826,1079.2z"/>
-        <g id="prev" onclick="return change(-1)" class="st59">
+        <g id="prev" style="cursor: pointer;" onclick="return change(-1)" class="st59">
           <g>
             <g>
               <g class="st60">
@@ -929,7 +939,7 @@
             </g>
           </g>
         </g>
-        <g id="next" onclick="return change(1)" class="st59">
+        <g id="next" style="cursor: pointer;" onclick="return change(1)" class="st59">
           <g>
             <g>
               <g class="st60">
@@ -1016,7 +1026,7 @@
   <script>
     TweenMax.to(document.getElementById('Falling'), 0.2, {x:'+=10', yoyo:true, repeat:5});
     TweenMax.to(document.getElementById('Falling'), 0.2, {x:'-=10', yoyo:true, repeat:5});
-    TweenMax.fromTo(document.getElementById("Falling"), 1.5, {y:'-15vh'}, {y:'72vh'});
+    TweenMax.fromTo(document.getElementById("Falling"), 1.5, {y:'-15vh'}, {y:'85vh'});
     setTimeout("document.getElementById('Falling').style.visibility = 'hidden';",2000);
     setTimeout("document.getElementById('standing').style.visibility = 'visible';",2000);
     var k,l;
@@ -1033,7 +1043,7 @@
     "../Assets/__9.jpg",
     "../Assets/__10.jpg",
     "../Assets/__11.jpg",
-  ];
+    ];
     var link = ["window.open('https://www.behance.net/gallery/91144577/Poster')",
                   "window.open('https://www.behance.net/gallery/90702661/AICSSYC19')",
                   "window.open('https://www.behance.net/gallery/87474789/CVM-Logo')",
@@ -1094,7 +1104,7 @@
 
       init = event.clientX;
 
-});
+    });
       window.addEventListener("mouseup",event => {
 
         end = event.clientX;

@@ -22,6 +22,7 @@ body
   background : radial-gradient(89.91% 115.49%, circle farthest-side, rgba(228, 253, 255, 1) 0%, rgba(112, 205, 227, 1) 100%);
   filter: progid:DXImageTransform.Microsoft.Alpha(Stlye=2);
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Stlye=2);"
+  overflow: hidden;
 }
 .fullBg1{
   width: 100vw;
@@ -92,7 +93,7 @@ p{
   }
   p{
     margin-right: 5%;
-    font-size: 80%;
+    font-size: 70%;
   }
   .bit1{
     width: 40vh;
@@ -159,7 +160,7 @@ h1{
   }
   #intro{
     margin-left: 5%;
-    font-size: 80%;
+    font-size: 70%;
   }
   .bit2{
     width: 40vh;

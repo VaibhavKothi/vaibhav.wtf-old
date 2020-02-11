@@ -15,6 +15,7 @@ body
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 .fullBg1{
   width: 211vh;

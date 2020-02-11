@@ -1,10 +1,10 @@
 /* Footer */
 .footer-shadow{
-  position: fixed;
+  position: absolute;
   background-color: #191919;
   top: 94%;
   border-radius: 2vw 2vw 0 0;
-  width: 100%;
+  width: 95%;
   height: 8vh;
   opacity: .7;
   -webkit-filter: blur(10px);
@@ -14,7 +14,7 @@
   filter: blur(10px);
 }
 .footer{
-  position: fixed;
+  position: absolute;
   display: flex;
   background-color: #191919;
   top: 94%;

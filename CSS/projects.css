@@ -4,7 +4,18 @@ body
   padding: 0;
   height: 100%;
   overflow: hidden;
+  background-color: #efefef;
 }
+#kmg1 { visibility: hidden; background: url("../Assets/__2.jpg") no-repeat -9999px -9999px; }
+#kmg2 { visibility: hidden; background: url("../Assets/__3.jpg") no-repeat -9999px -9999px; }
+#kmg3 { visibility: hidden; background: url("../Assets/__4.jpg") no-repeat -9999px -9999px; }
+#kmg4 { visibility: hidden; background: url("../Assets/__5.jpg") no-repeat -9999px -9999px; }
+#kmg5 { visibility: hidden; background: url("../Assets/__6.jpg") no-repeat -9999px -9999px; }
+#kmg6 { visibility: hidden; background: url("../Assets/__7.jpg") no-repeat -9999px -9999px; }
+#kmg7 { visibility: hidden; background: url("../Assets/__8.jpg") no-repeat -9999px -9999px; }
+#kmg8 { visibility: hidden; background: url("../Assets/__9.jpg") no-repeat -9999px -9999px; }
+#kmg9 { visibility: hidden; background: url("../Assets/__10.jpg") no-repeat -9999px -9999px; }
+#kmg10 { visibility: hidden; background: url("../Assets/__11.jpg") no-repeat -9999px -9999px; }
 .fullBg{
   height: 100vh;
   width: 100vw;
@@ -14,10 +25,19 @@ body
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 .fullBg1{
   width: 200vh;
   margin: 0;
   padding: 0;
   align-self: center;
+}
+@media only screen and (max-width: 840px) {
+  .fullBg1{
+    width: 150vh;
+  }
+  .fullBg{
+      justify-content: flex-end;
+  }
 }
