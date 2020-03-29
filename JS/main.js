@@ -20,7 +20,9 @@ window.addEventListener('beforeinstallprompt', (e) => {
   });
 });
 
-
+var body = document.getElementsByTagName('body')[0],
+x = body.clientWidth,
+y = body.clientHeight;
 function loader(){
 	const flag = 0;
 	if(flag === 0){
@@ -36,7 +38,8 @@ function aboutMe(){
 	TweenMax.to(document.getElementById("running"), 5, {x:'70vw'});
 	var audio = new Audio('./Assets/beep.mp3');
 	audio.play();
-	setTimeout("location.href='./aboutMe';",4000);
+  if(y>x){ setTimeout("location.href='./aboutMe';",2000); }
+	else { setTimeout("location.href='./aboutMe';",4000); }
 }
 function skills(){
 	document.getElementById("sitting").style.visibility = "hidden";
@@ -44,7 +47,8 @@ function skills(){
 	TweenMax.to(document.getElementById("runningL"), 5, {x:'-80vw'});
 	var audio = new Audio('./Assets/beep.mp3');
 	audio.play();
-	setTimeout("location.href='./skills';",4000);
+  if(y>x){ setTimeout("location.href='./skills';",2000); }
+	else { setTimeout("location.href='./skills';",4000); }
 }
 function projects(){
 	document.getElementById("sitting").style.visibility = "hidden";
@@ -52,7 +56,8 @@ function projects(){
 	TweenMax.to(document.getElementById("running"), 2, {x:'15vw'});
 	//var audio = new Audio('./Assets/beep.mp3');
 	//audio.play();
-	setTimeout("location.href='./projects';",2000);
+  if(y>x){ setTimeout("location.href='./projects';",2000); }
+	else { setTimeout("location.href='./projects';",4000); }
 	//document.getElementById("sitting").style.visibility = "hidden";
 	//setTimeout("location.href='https://www.behance.net/vaibhav_kothi';",000);
 }
