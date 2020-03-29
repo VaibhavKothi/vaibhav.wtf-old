@@ -16,6 +16,13 @@ body
   width: 100vw;
   visibility: hidden;
 }
+#overlay1{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+}
 .fullBg{
   height: 100vh;
   width: 100vw;

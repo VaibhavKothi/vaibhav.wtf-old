@@ -15,6 +15,7 @@
 </head>
 <body>
   <div id="overlay"></div>
+  <div id="overlay1"></div>
   <div class="fullBg">
     <div class="fullBg1">
       <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1920 1080" style="enable-background:new 0 0 1920 1080;" xml:space="preserve">
@@ -1117,7 +1118,7 @@
     var touchstartY = 0;
     var touchendX = 0;
     var touchendY = 0;
-    var gesuredZone = document.getElementById('overlay');
+    var gesuredZone = document.getElementById('overlay1');
     gesuredZone.addEventListener('touchstart', function(event) {
         touchstartX = event.changedTouches[0].screenX;
         touchstartY = event.changedTouches[0].screenY;
