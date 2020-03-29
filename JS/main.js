@@ -35,14 +35,14 @@ gesuredZone.addEventListener('touchend', function(event) {
     handleGesure();
 }, false);
 function handleGesure() {
-    if (touchendY < touchstartY) {
+    if (touchendX > touchstartX) {
+      skills();
+    }
+    else if (touchendY < touchstartY) {
       projects();
     }
     else if (touchendX < touchstartX) {
         aboutMe();
-    }
-    else if (touchendX > touchstartX) {
-        skills();
     }
 }
 
