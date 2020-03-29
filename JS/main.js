@@ -20,6 +20,40 @@ window.addEventListener('beforeinstallprompt', (e) => {
   });
 });
 
+var touchstartX = 0;
+var touchstartY = 0;
+var touchendX = 0;
+var touchendY = 0;
+var gesuredZone = document.getElementById('cont');
+gesuredZone.addEventListener('touchstart', function(event) {
+    touchstartX = event.changedTouches[0].screenX;
+    touchstartY = event.changedTouches[0].screenY;
+}, false);
+gesuredZone.addEventListener('touchend', function(event) {
+    touchendX = event.changedTouches[0].screenX;
+    touchendY = event.changedTouches[0].screenY;
+    handleGesure();
+}, false);
+function handleGesure() {
+    var swiped = 'swiped: ';
+    if (touchendX < touchstartX) {
+        alert(swiped + 'left!');
+    }
+    if (touchendX > touchstartX) {
+        alert(swiped + 'right!');
+    }
+    if (touchendY < touchstartY) {
+        alert(swiped + 'down!');
+    }
+    if (touchendY > touchstartY) {
+        alert(swiped + 'up!');
+    }
+    if (touchendY == touchstartY) {
+        alert('tap!');
+    }
+}
+
+
 var body = document.getElementsByTagName('body')[0],
 x = body.clientWidth,
 y = body.clientHeight;

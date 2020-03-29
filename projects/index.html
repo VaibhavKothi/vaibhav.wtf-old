@@ -1022,6 +1022,9 @@
       document.getElementById('overlay').style.visibility = 'visible';
       setTimeout("alert('Hey, Do me a favour & please rotate your device to landscape mode. 🙂')",1000);
     }
+    if (x>y){
+      document.getElementById('overlay').style.visibility = 'hidden';
+    }
     TweenMax.to(document.getElementById('Falling'), 0.2, {x:'+=10', yoyo:true, repeat:5});
     TweenMax.to(document.getElementById('Falling'), 0.2, {x:'-=10', yoyo:true, repeat:5});
     TweenMax.fromTo(document.getElementById("Falling"), 1.5, {y:'-15vh'}, {y:'85vh'});
