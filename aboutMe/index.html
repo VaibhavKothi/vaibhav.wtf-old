@@ -14,6 +14,7 @@
   <link rel="stylesheet" type="text/css" href="./CSS/footer.css">
 </head>
 <body>
+  <div id="gesture"></div>
   <div class="fullBg">
     <div class="fullBg1">
       <svg version="1.1" id="Whole" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 1080 429" style="enable-background:new 0 0 1080 429;" xml:space="preserve">
@@ -3100,9 +3101,5 @@
     </div>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
-  <script type="text/javascript">
-    TweenMax.to(document.getElementById("running"), 2, {x:'-5vw'});
-    setTimeout("document.getElementById('running').style.visibility = 'hidden';",2000);
-    setTimeout("document.getElementById('standing').style.visibility = 'visible';",2000);
-  </script>
+  <script src="../JS/aboutMe.js"></script>
 </body>
