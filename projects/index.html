@@ -1130,9 +1130,11 @@
     }, false);
     function handleGesure() {
         if (touchendX < touchstartX) {
+          alert("-1");
             change(-1);
         }
         else if (touchendX > touchstartX) {
+          alert("1");
             change(1);
         }
     };
