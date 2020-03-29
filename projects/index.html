@@ -1113,6 +1113,28 @@
         if(diff > 0) { setTimeout(change((-1) ) , 4000); }
         else if(diff < 0) { setTimeout(change((1) ) , 4000); }
     });
+    var touchstartX = 0;
+    var touchstartY = 0;
+    var touchendX = 0;
+    var touchendY = 0;
+    var gesuredZone = document.getElementById('cont');
+    gesuredZone.addEventListener('touchstart', function(event) {
+        touchstartX = event.changedTouches[0].screenX;
+        touchstartY = event.changedTouches[0].screenY;
+    }, false);
+    gesuredZone.addEventListener('touchend', function(event) {
+        touchendX = event.changedTouches[0].screenX;
+        touchendY = event.changedTouches[0].screenY;
+        handleGesure();
+    }, false);
+    function handleGesure() {
+        else if (touchendX < touchstartX) {
+            setTimeout(change((-1) ) , 4000);
+        }
+        else if (touchendX > touchstartX) {
+            setTimeout(change((1) ) , 4000);
+        }
+    }
     change(1);
     change(-1);
   </script>
