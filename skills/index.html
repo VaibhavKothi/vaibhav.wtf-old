@@ -14,7 +14,6 @@
   <link rel="stylesheet" type="text/css" href="../CSS/footer.css">
 </head>
 <body>
-  <div id="cont"></div>
   <div class="fullBg">
     <div class="fullBg1">
       <svg version="1.1" id="Skills" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 1920 1080" style="enable-background:new 0 0 1920 1080;" xml:space="preserve">
@@ -5296,25 +5295,6 @@
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
   <script>
-    var touchstartX = 0;
-    var touchstartY = 0;
-    var touchendX = 0;
-    var touchendY = 0;
-    var gesuredZone = document.getElementById('cont');
-    gesuredZone.addEventListener('touchstart', function(event) {
-        touchstartX = event.changedTouches[0].screenX;
-        touchstartY = event.changedTouches[0].screenY;
-    }, false);
-    gesuredZone.addEventListener('touchend', function(event) {
-        touchendX = event.changedTouches[0].screenX;
-        touchendY = event.changedTouches[0].screenY;
-        handleGesure();
-    }, false);
-    function handleGesure() {
-        if (touchendX < touchstartX) {
-            setTimeout("location.href='./';",100);
-        }
-    }
     TweenMax.to(document.getElementById("running"), 2, {x:'9vw'});
     setTimeout("document.getElementById('running').style.visibility = 'hidden';",2000);
     setTimeout("document.getElementById('sitting').style.visibility = 'visible';",2000);
