@@ -1128,10 +1128,10 @@
         handleGesure();
     }, false);
     function handleGesure() {
-        else if (touchendX < touchstartX) {
+        if (touchendX < touchstartX) {
             setTimeout(change((-1) ) , 4000);
         }
-        else if (touchendX > touchstartX) {
+        else (touchendX > touchstartX) {
             setTimeout(change((1) ) , 4000);
         }
     }
