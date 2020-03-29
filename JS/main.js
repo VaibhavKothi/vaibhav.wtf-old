@@ -35,21 +35,14 @@ gesuredZone.addEventListener('touchend', function(event) {
     handleGesure();
 }, false);
 function handleGesure() {
-    var swiped = 'swiped: ';
-    if (touchendX < touchstartX) {
-        alert(swiped + 'left!');
-    }
-    if (touchendX > touchstartX) {
-        alert(swiped + 'right!');
-    }
     if (touchendY < touchstartY) {
-        alert(swiped + 'down!');
+      projects();
     }
-    if (touchendY > touchstartY) {
-        alert(swiped + 'up!');
+    else if (touchendX < touchstartX) {
+        aboutMe();
     }
-    if (touchendY == touchstartY) {
-        alert('tap!');
+    else if (touchendX > touchstartX) {
+        skills();
     }
 }
 
