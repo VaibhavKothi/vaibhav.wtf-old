@@ -15,7 +15,6 @@
 </head>
 <body>
   <div id="overlay"></div>
-  <div id="overlay1"></div>
   <div class="fullBg">
     <div class="fullBg1">
       <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1920 1080" style="enable-background:new 0 0 1920 1080;" xml:space="preserve">
@@ -1020,7 +1019,6 @@
     x = body.clientWidth,
     y = body.clientHeight;
     if (y>x){
-      document.getElementById('overlay').style.visibility = 'visible';
       setTimeout("alert('Hey, Do me a favour & please rotate your device to landscape mode. 🙂')",1000);
     }
     if (x>y){
@@ -1118,7 +1116,7 @@
     var touchstartY = 0;
     var touchendX = 0;
     var touchendY = 0;
-    var gesuredZone = document.getElementById('overlay1');
+    var gesuredZone = document.getElementById('overlay');
     gesuredZone.addEventListener('touchstart', function(event) {
         touchstartX = event.changedTouches[0].screenX;
         touchstartY = event.changedTouches[0].screenY;
@@ -1130,12 +1128,10 @@
     }, false);
     function handleGesure() {
         if (touchendX < touchstartX) {
-          alert("-1");
-            change(-1);
+            change(1);
         }
         else if (touchendX > touchstartX) {
-          alert("1");
-            change(1);
+            change(-1);
         }
     };
     change(1);
