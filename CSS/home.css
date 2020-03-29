@@ -5,6 +5,15 @@ body
   height: 115%;
   overflow: hidden;
 }
+.addBtn {
+  display: none;
+  background-color: #efefef;
+  font-family: Product Sans Regular;
+  position: absolute;
+  top: 1px;
+  left: 50px;
+}
+
 
 #kmg1 { visibility: hidden; background: url("../Assets/__39.jpg") no-repeat -9999px -9999px; }
 #kmg2 { visibility: hidden; background: url("../Assets/__40.jpg") no-repeat -9999px -9999px; }

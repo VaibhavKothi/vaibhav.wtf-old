@@ -1,8 +1,10 @@
 {
-  "name": "Vaibhav Kothi Portfolio",
+  "name": "Vaibhav Kothi",
   "short_name": "vaibhav.wtf",
   "lang": "en-US",
+  "background_color": "#efefef",
   "start_url": "/index.html",
+  "description": "Portfolio of Vaibhav Kothi - Designer & Developer.",
   "icons": [
     {
       "src": "Icon/icon-72x72.png",
@@ -45,5 +47,7 @@
       "type": "image/png"
     }
   ],
-  "display": "standalone"
+  "display": "standalone",
+  "theme_color": "#efefef",
+  "prefer_related_applications": true
 }
