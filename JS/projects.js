@@ -13,9 +13,10 @@ TweenMax.fromTo(document.getElementById("Falling"), 1.5, {y:'-15vh'}, {y:'85vh'}
 setTimeout("document.getElementById('Falling').style.visibility = 'hidden';",2000);
 setTimeout("document.getElementById('standing').style.visibility = 'visible';",2000);
 var k,l;
-const total=12;
+const total=13;
 var i = 0;
 var img = [
+"../Assets/__38.jpg",
 "../Assets/__39.jpg",
 "../Assets/__40.jpg",
 "../Assets/__41.jpg",
@@ -29,7 +30,8 @@ var img = [
 "../Assets/__49.jpg",
 "../Assets/__50.jpg",
 ];
-var link = [  "window.open('https://www.behance.net/gallery/94270923/BeKnownDigital')",
+var link = [  "window.open('https://www.instagram.com/vaibhav.wtf/')",
+              "window.open('https://www.behance.net/gallery/94270923/BeKnownDigital')",
               "window.open('https://www.behance.net/gallery/91144577/Poster')",
               "window.open('https://www.behance.net/gallery/90702661/AICSSYC19')",
               "window.open('https://www.behance.net/gallery/87474789/CVM-Logo')",
