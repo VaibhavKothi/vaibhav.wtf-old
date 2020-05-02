@@ -17,6 +17,19 @@ self.addEventListener('install', function(e) {
   );
 });
 
+self.addEventListener('notificationclick', function(e) {
+  var notification = e.notification;
+  var primaryKey = notification.data.primaryKey;
+  var action = e.action;
+
+  if (action === 'close') {
+    notification.close();
+  } else {
+    clients.openWindow('vaibhav.wtf/projects');
+    notification.close();
+  }
+});
+
 /* Serve cached content when offline */
 self.addEventListener('fetch', function(e) {
   e.respondWith(

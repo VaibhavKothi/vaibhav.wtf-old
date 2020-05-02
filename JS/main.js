@@ -6,7 +6,7 @@ function displayNotification() {
   if (Notification.permission == 'granted') {
     navigator.serviceWorker.getRegistration().then(function(reg) {
       var options = {
-              body: "Let's fight this pendamic together 🤗",
+              body: "Let's get creative 🤗",
               icon: './Assets/covid.png',
               vibrate: [300, 100, 400],
               data: {
@@ -14,7 +14,7 @@ function displayNotification() {
                 primaryKey: 1
               },
               actions: [
-                {action: 'explore', title: 'Explore more!',
+                {action: 'projects', title: 'Explore my Projects!',
                   icon: './Assets/check.png'},
                 {action: 'close', title: 'Close',
                   icon: './Assets/cross.png'},
