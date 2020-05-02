@@ -1,3 +1,26 @@
+Notification.requestPermission(function(status) {
+    console.log('Notification permission status:', status);
+});
+
+function displayNotification() {
+  if (Notification.permission == 'granted') {
+    navigator.serviceWorker.getRegistration().then(function(reg) {
+      var options = {
+              body: "Let's fight this pendamic together 🤗",
+              icon: './Icon/logo.png',
+              vibrate: [100, 50, 100],
+              data: {
+                dateOfArrival: Date.now(),
+                primaryKey: 1
+              }
+      };
+      reg.showNotification('Stay Home, Stay Safe!');
+    });
+  }
+}
+
+displayNotification();
+
 let deferredPrompt;
 window.addEventListener('beforeinstallprompt', (e) => {
   deferredPrompt = e;
