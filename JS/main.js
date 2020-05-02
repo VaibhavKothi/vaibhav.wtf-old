@@ -7,12 +7,18 @@ function displayNotification() {
     navigator.serviceWorker.getRegistration().then(function(reg) {
       var options = {
               body: "Let's fight this pendamic together 🤗",
-              icon: './Icon/logo.png',
-              vibrate: [100, 50, 100],
+              icon: './Assets/covid.png',
+              vibrate: [300, 100, 400],
               data: {
                 dateOfArrival: Date.now(),
                 primaryKey: 1
-              }
+              },
+              actions: [
+                {action: 'explore', title: 'Explore more!',
+                  icon: './Assets/check.png'},
+                {action: 'close', title: 'Close',
+                  icon: './Assets/cross.png'},
+              ]
       };
       reg.showNotification('Stay Home, Stay Safe!', options);
     });
