@@ -25,7 +25,7 @@ function displayNotification() {
   }
 }
 
-setTimeout(displayNotification(), 120000);
+setTimeout(displayNotification(), 1200000);
 
 let deferredPrompt;
 window.addEventListener('beforeinstallprompt', (e) => {

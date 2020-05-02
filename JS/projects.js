@@ -54,6 +54,7 @@ var link = [  "window.open('https://www.instagram.com/vaibhav.wtf/')",
    TweenMax.to(document.getElementById('xyz'), 1.5, { ease: Power1.easeOut, autoAlpha:1});
    document.getElementById('xyz').setAttribute('xlink:href', img[i]);
    document.getElementById('Screen').setAttribute('onclick', link[i]);
+   document.getElementById('overlay').setAttribute('onclick', link[i]);
    setTimeout(sides(i), 2000);
  };
  function sides( l ) {
