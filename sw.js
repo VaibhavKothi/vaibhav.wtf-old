@@ -6,9 +6,8 @@ TODO:
 */
 
 var cacheName = 'vaibhav-cache';
-var filesToCache = ['/', '/index.html'];
+var filesToCache = ['/', '/index.html', '/JS/main.js'];
 
-/* Start the service worker and cache all of the app's content */
 self.addEventListener('install', function(e) {
   e.waitUntil(
     caches.open(cacheName).then(function(cache) {
