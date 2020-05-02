@@ -14,7 +14,7 @@ function displayNotification() {
                 primaryKey: 1
               }
       };
-      reg.showNotification('Stay Home, Stay Safe!');
+      reg.showNotification('Stay Home, Stay Safe!', options);
     });
   }
 }
