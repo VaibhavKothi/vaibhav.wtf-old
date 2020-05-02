@@ -25,7 +25,7 @@ self.addEventListener('notificationclick', function(e) {
   if (action === 'close') {
     notification.close();
   } else {
-    clients.openWindow('vaibhav.wtf/projects');
+    clients.openWindow('https://vaibhav.wtf/projects');
     notification.close();
   }
 });
