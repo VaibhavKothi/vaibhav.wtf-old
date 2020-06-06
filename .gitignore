@@ -1,1 +1,6 @@
 .now
+.nowignore
+pinterest-26d1f.html
+sitemap.xml
+robots.txt
+node_modules

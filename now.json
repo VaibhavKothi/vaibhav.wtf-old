@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "routes": [
+    { "src": "/me", "dest": "/aboutMe" },
+    { "src": "/about", "dest": "/aboutMe" },
+    { "src": "/who", "dest": "/aboutMe" },
+    { "src": "/what", "dest": "/projects" },
+    { "src": "/works", "dest": "/projects" },
+    { "src": "/kaam", "dest": "/projects" },
+    { "src": "/view-source", "dest": "https://github.com/VaibhavKothi/vaibhav.wtf" },
+    { "src": "/getcode", "dest": "https://github.com/VaibhavKothi/vaibhav.wtf" },
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "status": 404, "dest": "/404" }
+  ]
+}
