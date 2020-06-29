@@ -23,8 +23,12 @@ self.addEventListener('notificationclick', function(e) {
 
   if (action === 'close') {
     notification.close();
-  } else {
-    clients.openWindow('https://vaibhav.wtf/projects');
+  }
+  else if(action == 'call'){
+    clients.openWindow('tel:+918866827025', "_self");
+  }
+  else {
+    clients.openWindow('tel:+918866827025');
     notification.close();
   }
 });

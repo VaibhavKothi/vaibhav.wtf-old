@@ -1,12 +1,65 @@
+function displayNotification() {
+  if (Notification.permission == 'granted') {
+    navigator.serviceWorker.getRegistration().then(function(reg) {
+      var options = {
+              body: "Feel free to contact anytime 🤗",
+              icon: './Icon/logo.png',
+              vibrate: [300, 100, 400],
+              data: {
+                dateOfArrival: Date.now(),
+                primaryKey: 1
+              },
+              actions: [
+                {action: 'call', title: 'Make a Call!',
+                  icon: './Assets/check.png'},
+                {action: 'close', title: 'Dismiss',
+                  icon: './Assets/cross.png'},
+              ]
+      };
+      reg.showNotification('Contact - Vaibhav Kothi', options);
+    });
+  }
+}
+
+
+let deferredPrompt;
+window.addEventListener('beforeinstallprompt', (e) => {
+  deferredPrompt = e;
+  showInstallPromotion();
+});
+window.addEventListener('beforeinstallprompt', (e) => {
+  deferredPrompt = e;
+  addBtn.style.display = 'block';
+  addBtn.addEventListener('click', (e) => {
+    addBtn.style.display = 'none';
+    deferredPrompt.prompt();
+    deferredPrompt.userChoice.then((choiceResult) => {
+        if (choiceResult.outcome === 'accepted') {
+          console.log('User accepted the A2HS prompt');
+        } else {
+          console.log('User dismissed the A2HS prompt');
+        }
+        deferredPrompt = null;
+      });
+  });
+});
+
 var body = document.getElementsByTagName('body')[0],
 x = body.clientWidth,
 y = body.clientHeight;
 if (y>x){
-  setTimeout("alert('Hey, Do me a favour & please rotate your device to landscape mode. 🙂')",1000);
+  if(x <= 400){document.getElementById('Screen').style.transform = "scale(0.55, 0.55)";
+        document.getElementById('Screen').style.transform += "translate(785px, 300px)";}
+  else{ document.getElementById('Screen').style.transform = "scale(0.7, 0.7)";
+        document.getElementById('Screen').style.transform += "translate(410px, 200px)";}
+  document.getElementById('Me').style.transform = "scale(0.8, 0.8)";
+  document.getElementById('Me').style.transform += "translate(10px, 200px)";
+  document.getElementById('Falling').style.visibility = 'hidden';
 }
-if (x>y){
+if (y<x){
   document.getElementById('overlay').style.visibility = 'hidden';
 }
+
 TweenMax.to(document.getElementById('Falling'), 0.2, {x:'+=10', yoyo:true, repeat:5});
 TweenMax.to(document.getElementById('Falling'), 0.2, {x:'-=10', yoyo:true, repeat:5});
 TweenMax.fromTo(document.getElementById("Falling"), 1.5, {y:'-15vh'}, {y:'85vh'});
@@ -15,6 +68,7 @@ setTimeout("document.getElementById('standing').style.visibility = 'visible';",2
 var k,l;
 const total=14;
 var i = 0;
+
 var img = [
 "../Assets/__37.jpg",
 "../Assets/__38.jpg",
@@ -58,6 +112,9 @@ var link = [  "window.open('https://www.behance.net/gallery/99078811/Agrimycil-U
    document.getElementById('Screen').setAttribute('onclick', link[i]);
    document.getElementById('overlay').setAttribute('onclick', link[i]);
    setTimeout(sides(i), 2000);
+   if(i == 0){ document.getElementById('Swipe').style.visibility = 'visible';
+                TweenMax.fromTo(document.getElementById('Swipe'), 1.5, {autoAlpha:0}, {ease: Power1.easeOut, autoAlpha:1, repeat:2, repeatDelay:0.5});}
+   else if(i > 0 ) { document.getElementById('Swipe').style.visibility = 'hidden'; }
  };
  function sides( l ) {
    var z,a,b;

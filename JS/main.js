@@ -2,53 +2,6 @@ Notification.requestPermission(function(status) {
     console.log('Notification permission status:', status);
 });
 
-function displayNotification() {
-  if (Notification.permission == 'granted') {
-    navigator.serviceWorker.getRegistration().then(function(reg) {
-      var options = {
-              body: "Let's get creative 🤗",
-              icon: './Assets/covid.png',
-              vibrate: [300, 100, 400],
-              data: {
-                dateOfArrival: Date.now(),
-                primaryKey: 1
-              },
-              actions: [
-                {action: 'projects', title: 'Explore my Projects!',
-                  icon: './Assets/check.png'},
-                {action: 'close', title: 'Close',
-                  icon: './Assets/cross.png'},
-              ]
-      };
-      reg.showNotification('Stay Home, Stay Safe!', options);
-    });
-  }
-}
-
-// setTimeout(displayNotification(), 1200000);
-
-let deferredPrompt;
-window.addEventListener('beforeinstallprompt', (e) => {
-  deferredPrompt = e;
-  showInstallPromotion();
-});
-window.addEventListener('beforeinstallprompt', (e) => {
-  deferredPrompt = e;
-  addBtn.style.display = 'block';
-  addBtn.addEventListener('click', (e) => {
-    addBtn.style.display = 'none';
-    deferredPrompt.prompt();
-    deferredPrompt.userChoice.then((choiceResult) => {
-        if (choiceResult.outcome === 'accepted') {
-          console.log('User accepted the A2HS prompt');
-        } else {
-          console.log('User dismissed the A2HS prompt');
-        }
-        deferredPrompt = null;
-      });
-  });
-});
-
 var touchstartX = 0;
 var touchstartY = 0;
 var touchendX = 0;

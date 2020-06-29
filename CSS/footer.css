@@ -7,11 +7,6 @@
   width: 95%;
   height: 8vh;
   opacity: .7;
-  -webkit-filter: blur(10px);
-  -moz-filter: blur(10px);
-  -o-filter: blur(10px);
-  -ms-filter: blur(10px);
-  filter: blur(10px);
 }
 .footer{
   position: absolute;
@@ -26,6 +21,7 @@
 }
 .logo{
   margin-left: 1.5%;
+  margin-bottom: 0.5%;
   width: 5%;
 }
 .design{
@@ -36,6 +32,7 @@
 .contact{
   margin-right: 1.5%;
   overflow: visible;
+  cursor: pointer;
 }
 #logo{
   height: 95%;
