@@ -70,6 +70,7 @@ const total=14;
 var i = 0;
 
 var img = [
+"../Assets/__36.jpg",
 "../Assets/__37.jpg",
 "../Assets/__38.jpg",
 "../Assets/__39.jpg",
@@ -85,7 +86,8 @@ var img = [
 "../Assets/__49.jpg",
 "../Assets/__50.jpg",
 ];
-var link = [  "window.open('https://www.behance.net/gallery/99078811/Agrimycil-UIUX')",
+var link = [  "window.open('https://www.behance.net/gallery/100122145/SPECTRUM-2020')",
+              "window.open('https://www.behance.net/gallery/99078811/Agrimycil-UIUX')",
               "window.open('https://www.instagram.com/vaibhav.wtf/')",
               "window.open('https://www.behance.net/gallery/94270923/BeKnownDigital')",
               "window.open('https://www.behance.net/gallery/91144577/Poster')",
