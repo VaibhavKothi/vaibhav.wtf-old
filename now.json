@@ -23,6 +23,7 @@
     { "src": "/CV", "dest": "/Resume" },
     { "src": "/Cv", "dest": "/Resume" },
     { "src": "/cV", "dest": "/Resume" },
+    { "src": "/nikhil", "dest": "https://xd.adobe.com/view/bcf27d52-8624-4bf5-468d-05aaa6ed2ae4-cac3/?fullscreen" },
     { "src": "/view-source", "dest": "https://github.com/VaibhavKothi/vaibhav.wtf" },
     { "src": "/getcode", "dest": "https://github.com/VaibhavKothi/vaibhav.wtf" },
     { "handle": "filesystem" },
