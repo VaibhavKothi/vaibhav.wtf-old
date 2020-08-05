@@ -66,10 +66,11 @@ TweenMax.fromTo(document.getElementById("Falling"), 1.5, {y:'-15vh'}, {y:'85vh'}
 setTimeout("document.getElementById('Falling').style.visibility = 'hidden';",2000);
 setTimeout("document.getElementById('standing').style.visibility = 'visible';",2000);
 var k,l;
-const total=14;
+const total=15;
 var i = 0;
 
 var img = [
+"../Assets/__35.jpg",
 "../Assets/__36.jpg",
 "../Assets/__37.jpg",
 "../Assets/__38.jpg",
@@ -86,7 +87,8 @@ var img = [
 "../Assets/__49.jpg",
 "../Assets/__50.jpg",
 ];
-var link = [  "window.open('https://www.behance.net/gallery/100122145/SPECTRUM-2020')",
+var link = [  "window.open('https://www.behance.net/gallery/101915501/Trading-Dudes')",
+              "window.open('https://www.behance.net/gallery/100122145/SPECTRUM-2020')",
               "window.open('https://www.behance.net/gallery/99078811/Agrimycil-UIUX')",
               "window.open('https://www.instagram.com/vaibhav.wtf/')",
               "window.open('https://www.behance.net/gallery/94270923/BeKnownDigital')",

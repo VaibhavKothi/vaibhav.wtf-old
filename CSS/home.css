@@ -14,7 +14,10 @@ body
   left: 50px;
 }
 
-
+#kmg16 { visibility: hidden; background: url("../Assets/__35.jpg") no-repeat -9999px -9999px; }
+#kmg15 { visibility: hidden; background: url("../Assets/__36.jpg") no-repeat -9999px -9999px; }
+#kmg14 { visibility: hidden; background: url("../Assets/__37.jpg") no-repeat -9999px -9999px; }
+#kmg13 { visibility: hidden; background: url("../Assets/__38.jpg") no-repeat -9999px -9999px; }
 #kmg1 { visibility: hidden; background: url("../Assets/__39.jpg") no-repeat -9999px -9999px; }
 #kmg2 { visibility: hidden; background: url("../Assets/__40.jpg") no-repeat -9999px -9999px; }
 #kmg3 { visibility: hidden; background: url("../Assets/__41.jpg") no-repeat -9999px -9999px; }
@@ -27,8 +30,7 @@ body
 #kmg10 { visibility: hidden; background: url("../Assets/__48.jpg") no-repeat -9999px -9999px; }
 #kmg11 { visibility: hidden; background: url("../Assets/__49.jpg") no-repeat -9999px -9999px; }
 #kmg12 { visibility: hidden; background: url("../Assets/__50.jpg") no-repeat -9999px -9999px; }
-#kmg13 { visibility: hidden; background: url("../Assets/__38.jpg") no-repeat -9999px -9999px; }
-#kmg13 { visibility: hidden; background: url("../Assets/__37.jpg") no-repeat -9999px -9999px; }
+
 
 #load{
   width: 100vw;
