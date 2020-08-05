@@ -14,6 +14,7 @@ body
   left: 50px;
 }
 
+#kmg17 { visibility: hidden; background: url("../Assets/__34.jpg") no-repeat -9999px -9999px; }
 #kmg16 { visibility: hidden; background: url("../Assets/__35.jpg") no-repeat -9999px -9999px; }
 #kmg15 { visibility: hidden; background: url("../Assets/__36.jpg") no-repeat -9999px -9999px; }
 #kmg14 { visibility: hidden; background: url("../Assets/__37.jpg") no-repeat -9999px -9999px; }
