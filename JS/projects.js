@@ -112,6 +112,7 @@ var link = [  "window.open('https://www.behance.net/gallery/101955593/IEEE-ICNL-
    if(k>=0) {   ++i;     }
    else if(k < 0) { --i; }
    console.log(i);
+   TweenMax.fromTo(document.getElementById('Tap'), 1, {autoAlpha:1}, {ease: Power1.easeIn, autoAlpha:0, repeat:1, repeatDelay:0.5});
    TweenMax.set(document.getElementById('xyz'),{autoAlpha:0});
    TweenMax.to(document.getElementById('xyz'), 1.5, { ease: Power1.easeOut, autoAlpha:1});
    document.getElementById('xyz').setAttribute('xlink:href', img[i]);
