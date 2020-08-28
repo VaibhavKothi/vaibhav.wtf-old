@@ -6,6 +6,31 @@ body
   overflow: hidden;
   background-color: #efefef;
 }
+h1{
+  font-family: Product Sans Regular;
+  color: #191919;
+  font-size: 300%;
+  padding: 0;
+  margin: 0;
+    align: center;
+    text-align: center;
+}
+p, a{
+  color: #5f6368;
+  font-family: Bahnschrift Regular;
+  font-size: 130%;
+  padding-top: .5%;
+  margin-left: 5%;
+  margin-right: 5%;
+  align: center;
+  text-align: center;
+}
+a{
+  color: darkblue;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
 #overlay{
   position: fixed;
   top: 0;
@@ -23,10 +48,4 @@ body
   justify-content: center;
   align-items: center;
   overflow: hidden;
-}
-.fullBg1{
-  width: 200vh;
-  margin: 0;
-  padding: 0;
-  align-self: center;
 }
