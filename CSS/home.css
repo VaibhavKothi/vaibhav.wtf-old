@@ -13,6 +13,20 @@ body
   top: 1px;
   left: 50px;
 }
+.texture{
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: url("../temp/textures/01.png");
+  z-index: 5;
+  background-size: 25%;
+}
 
 #kmg17 { visibility: hidden; background: url("../Assets/__34.jpg") no-repeat -9999px -9999px; }
 #kmg16 { visibility: hidden; background: url("../Assets/__35.jpg") no-repeat -9999px -9999px; }
@@ -89,6 +103,7 @@ body
   flex-direction: row;
   justify-content: space-between;
   cursor: context-menu;
+  z-index: 20;
 }
 .head{
   font-family: Product Sans Regular;
@@ -96,6 +111,7 @@ body
   color: #f9f9f9;
   text-align: left;
   margin: 0;
+
 }
 @media only screen and (max-width: 840px) {
   .head{
@@ -134,6 +150,7 @@ p{
   align-items: center;
   height: 100%;
   width: 100%;
+    z-index: 15;
 }
 #aboutMe{
   display: flex;
