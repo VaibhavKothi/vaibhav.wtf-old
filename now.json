@@ -23,6 +23,8 @@
     { "src": "/CV", "dest": "/Resume" },
     { "src": "/Cv", "dest": "/Resume" },
     { "src": "/cV", "dest": "/Resume" },
+    { "src": "moon", "dest": "/🌚/🌚.jpg" },
+    { "src": "🌚", "dest": "/🌚/🌚.jpg" },
     { "src": "/girafalls", "dest": "https://drive.google.com/drive/folders/1Cbf9W1S3caCPly-NyOvNC9T6MD64xkWh?usp=sharing" },
     { "src": "/GiraFalls", "dest": "https://drive.google.com/drive/folders/1Cbf9W1S3caCPly-NyOvNC9T6MD64xkWh?usp=sharing" },
     { "src": "/friends", "dest": "https://drive.google.com/drive/folders/1eAJnNqsfYrh7KnLAVITEUQSpDI_ybTuu" },
