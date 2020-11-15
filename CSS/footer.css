@@ -1,3 +1,20 @@
+/* Back Button */
+#back{
+  cursor: pointer;
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  margin: 0;
+  padding: 0;
+  width: 10%;
+  overflow: hidden;
+  z-index: 60;
+  opacity: 15%;
+}
+#back:hover{
+  opacity: 100%;
+}
+
 /* Footer */
 .footer-shadow{
   position: absolute;
