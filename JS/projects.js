@@ -48,7 +48,7 @@ var body = document.getElementsByTagName('body')[0],
 x = body.clientWidth,
 y = body.clientHeight;
 if (y>x){
-  if(x <= 400){document.getElementById('Screen').style.transform = "scale(0.55, 0.55)";
+  if(x <= 400){document.getElementById('Screen').style.transform = "scale(0.545, 0.545)";
         document.getElementById('Screen').style.transform += "translate(785px, 300px)";}
   else{ document.getElementById('Screen').style.transform = "scale(0.7, 0.7)";
         document.getElementById('Screen').style.transform += "translate(410px, 200px)";}
