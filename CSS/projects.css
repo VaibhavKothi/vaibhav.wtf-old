@@ -47,4 +47,10 @@ a{
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
+  align-items: center;
+}
+.fullBg1{
+  width: 211vh;
+  margin: 0;
+  padding: 0;
 }
