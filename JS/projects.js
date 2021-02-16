@@ -66,7 +66,7 @@ TweenMax.fromTo(document.getElementById("Falling"), 1.5, {y:'-15vh'}, {y:'85vh'}
 setTimeout("document.getElementById('Falling').style.visibility = 'hidden';",2000);
 setTimeout("document.getElementById('standing').style.visibility = 'visible';",2000);
 var k,l;
-const total=20;
+const total=19;
 var i = 0;
 
 var img = [   "../Assets/__32.jpg",
