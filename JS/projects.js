@@ -66,10 +66,11 @@ TweenMax.fromTo(document.getElementById("Falling"), 1.5, {y:'-15vh'}, {y:'85vh'}
 setTimeout("document.getElementById('Falling').style.visibility = 'hidden';",2000);
 setTimeout("document.getElementById('standing').style.visibility = 'visible';",2000);
 var k,l;
-const total=19;
+const total=20;
 var i = 0;
 
-var img = [   "../Assets/__32.jpg",
+var img = [   "../Assets/__31.jpg",
+              "../Assets/__32.jpg",
               "../Assets/__33.jpg",
               "../Assets/__34.jpg",
               "../Assets/__35.jpg",
@@ -89,7 +90,8 @@ var img = [   "../Assets/__32.jpg",
               "../Assets/__49.jpg",
               "../Assets/__50.jpg",
 ];
-var link = [  "window.open('https://www.behance.net/gallery/113149979/Mukesh-Patel')",
+var link = [  "window.open('https://www.behance.net/gallery/114524275/Khushi-Academy')",
+              "window.open('https://www.behance.net/gallery/113149979/Mukesh-Patel')",
               "window.open('https://www.behance.net/gallery/110684849/VP-Financials')",
               "window.open('https://www.behance.net/gallery/101955593/IEEE-ICNL-2020')",
               "window.open('https://www.behance.net/gallery/101915501/Trading-Dudes')",
