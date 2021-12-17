@@ -42,6 +42,9 @@
     { "src": "/QUVATLH", "dest": "https://xd.adobe.com/view/be67d474-fc93-4db8-a5c5-46a571860a2b-eb34/?fullscreen&hints=off" },
     { "src": "/view-source", "dest": "https://github.com/VaibhavKothi/vaibhav.wtf" },
     { "src": "/getcode", "dest": "https://github.com/VaibhavKothi/vaibhav.wtf" },
+    { "src": "/SpiderManWallpapers", "dest": "https://www.mediafire.com/folder/8f4nh2x2sklyb/SpiderMan_Wallpapers" },
+    { "src": "/SpiderMan", "dest": "https://www.mediafire.com/folder/8f4nh2x2sklyb/SpiderMan_Wallpapers" },
+    { "handle": "filesystem" },
     { "handle": "filesystem" },
     { "src": "/(.*)", "status": 404, "dest": "/404" }
   ]
