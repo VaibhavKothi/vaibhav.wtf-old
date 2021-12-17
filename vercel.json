@@ -45,7 +45,6 @@
     { "src": "/SpiderManWallpapers", "dest": "https://www.mediafire.com/folder/8f4nh2x2sklyb/SpiderMan_Wallpapers" },
     { "src": "/SpiderMan", "dest": "https://www.mediafire.com/folder/8f4nh2x2sklyb/SpiderMan_Wallpapers" },
     { "handle": "filesystem" },
-    { "handle": "filesystem" },
     { "src": "/(.*)", "status": 404, "dest": "/404" }
   ]
 }
