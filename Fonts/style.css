@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Bungee+Hairline&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
 @font-face {
 font-family: 'Bahnschrift Regular';
 font-style: normal;
@@ -13,3 +12,9 @@ font-style: normal;
 font-weight: normal;
 src: local('Product Sans Regular'), url('Product Sans Regular.ttf') format('truetype');
 }
+@font-face {
+    font-family: 'Garamond';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Garamond'), url('Garamond.ttf') format('truetype');
+    }
