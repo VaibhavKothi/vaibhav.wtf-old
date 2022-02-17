@@ -2,7 +2,7 @@ body
 {
   margin: 0;
   padding: 0;
-  background-color: #efefef;
+  background-color: #FBF8F6;
 }
 .fullBg{
   width: 98vw;
@@ -14,9 +14,9 @@ body
   align-items: center;
 }
 #Download{
-  background-color: #FFAA00;
-  height: 12vh;
-  width: 12vh;
+  background-color: #007490;
+  height: 8vh;
+  width: 8vh;
   position: fixed;
   border-radius: 50%;
   bottom: 3vh;
