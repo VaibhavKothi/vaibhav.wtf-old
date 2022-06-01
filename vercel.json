@@ -19,6 +19,7 @@
     { "src": "/Kaam", "dest": "/projects" },
     { "src": "/resume", "dest": "/Resume" },
     { "src": "/cv", "dest": "/Resume" },
+    { "src": "/portfolio", "dest": "/Assets/Portfolio.pdf" },
     { "src": "/Resume", "dest": "/Resume" },
     { "src": "/CV", "dest": "/Resume" },
     { "src": "/Cv", "dest": "/Resume" },
