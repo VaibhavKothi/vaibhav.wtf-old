@@ -11,8 +11,42 @@ body
   margin: 0;
   padding: 0;
   position: fixed;
-  z-index: 999;
+  z-index: 998;
   visibility: hidden;
+}
+#buttons{
+  width: 100vw;
+  position: absolute;
+  bottom: 7%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+button {
+  background-color: #000;
+  font-family: Product Sans Regular;
+  border: none;
+  border-radius: 12px;
+  color: #fff;
+  padding: 1vw 3vw;
+  text-align: left;
+  margin-right: 0.5%;
+  margin-left: 0.5%;
+  font-size: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+button:hover {
+  background-color: #0F0D1A;
+}
+button:active {
+  background-color: #2F14A6;
 }
 .fullBg{
   height: 90vh;
@@ -30,7 +64,7 @@ body
   background : -ms-radial-gradient(89.91% 115.49%, circle farthest-side, rgba(228, 253, 255, 1) 0%, rgba(112, 205, 227, 1) 100%);
   background : radial-gradient(89.91% 115.49%, circle farthest-side, rgba(228, 253, 255, 1) 0%, rgba(112, 205, 227, 1) 100%);
   filter: progid:DXImageTransform.Microsoft.Alpha(Stlye=2);
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Stlye=2);"
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Stlye=2);";
   overflow: hidden;
 }
 .fullBg1{
